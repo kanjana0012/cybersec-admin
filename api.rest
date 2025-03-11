@@ -1,21 +1,27 @@
-# create User
-
-POST  http://localhost:3000/user 
+### Create user 
+POST http://localhost:3000/user 
 Content-Type: application/json
 
 {
-        "username": "demo8",
-        "password": "demo8"
+"username": "demo5", "password": "demo5"
 }
-    
-######update User
-PUT http://localhost:3000/user/15
+
+### Update user 
+PUT http://localhost:3000/user 
 Content-Type: application/json
 
 {
-    "username": "demo5_updated",
-    "password": "newpassword"
+"id": 1, "username": "demo1", "password": "demo_pass"
 }
 
-### Delete User
-DELETE http://localhost:3000/user/15
+### Delete user 
+DELETE http://localhost:3000/user 
+Content-Type: application/json
+
+{
+"id": 7
+}
+
+### Search user 
+GET http://localhost:3000/user/search?q=d 
+Content-Type: application/json
